@@ -1,0 +1,21 @@
+server_url: https://##CHANGE_APP_NAME##.fly.dev
+listen_addr: 127.0.0.1:8080
+metrics_listen_addr: 127.0.0.1:9090
+private_key_path: /etc/headscale/private.key
+noise:
+  private_key_path: /etc/headscale/noise_private.key
+ip_prefixes:
+  - 10.4.0.0/16
+derp:
+  urls:
+    - https://controlplane.tailscale.com/derpmap/default
+acl_policy_path: /etc/headscale/acls.hujson
+dns_config:
+  override_local_dns: true
+  nameservers:
+    - 8.8.8.8
+    - 1.1.1.1
+  magic_dns: true
+  base_domain: v.pn
+db_type: sqlite3
+db_path: /etc/headscale/db.sqlite

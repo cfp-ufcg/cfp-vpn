@@ -1,8 +1,0 @@
-server_url: https://##CHANGE_APP_NAME##.fly.dev
-listen_addr: 127.0.0.1:8080
-metrics_listen_addr: 127.0.0.1:9090
-private_key_path: /etc/headscale/data/private.key
-noise:
-  private_key_path: /etc/headscale/data/noise_private.key
-db_type: sqlite3
-db_path: /etc/headscale/data/db.sqlite

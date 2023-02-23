@@ -1,9 +1,9 @@
 services:
   all-in-one:
-    build: .
+    build: ./build
     restart: always
     volumes:
-      - ./data:/etc/headscale/data
+      - ./data:/etc/headscale
     cap_add:
       - NET_ADMIN
       - SYS_MODULE

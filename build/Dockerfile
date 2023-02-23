@@ -13,10 +13,11 @@ COPY --from=frpc /usr/bin/frpc /frpc
 
 RUN mkdir /etc/{headscale,frpc}
 
-COPY config.yaml /etc/headscale/config.yaml
+COPY config.yaml /config.yaml
 COPY frpc.ini /etc/frpc/frpc.ini
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY entrypoint.sh /entrypoint.sh
+COPY acls.hujson /acls.hujson
 
 RUN chmod +x /entrypoint.sh
 
