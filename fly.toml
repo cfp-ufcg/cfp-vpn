@@ -1,0 +1,16 @@
+app = "change-me"
+
+[build]
+  image = "snowdreamtech/frps:latest"
+
+[[services]]
+  internal_port = 7000
+  protocol = "tcp"
+
+[[services]]
+  internal_port = 7001
+  protocol = "tcp"
+
+  [[services.ports]]
+      handlers = ["tls", "http"]
+      port = "443"
